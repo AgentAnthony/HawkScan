@@ -862,8 +862,8 @@ def tryUrl(i, q, threads, manager=False, directory=False, forced=False, u_agent=
                             else:
                                 filterM.check_exclude_page(req, res, directory, forbi, HOUR, parsing, size_bytes=len_req)
                         else:
-                            server_error = "400" if status_link == 400 else 500
-                            print("{} {} {} ({} bytes) \033[33m{} Server Error\033[0m").format(HOUR, SERV_ERR, res, len_req, server_error)
+                            server_error = "400" if status_link == 400 else "500"
+                            print("{} {} {} ({} bytes) \033[33m{} Server Error\033[0m".format(HOUR, SERV_ERR, res, len_req, server_error))
                 elif status_link in [422, 423, 424, 425]:
                     print("{} {} {} \033[33mError WebDAV\033[0m".format(HOUR, LESS, res))
                     #report.create_report_url(status_link, res, directory) #TODO
