@@ -54,7 +54,7 @@ class parsing_html:
                         else:
                             with open(directory + "/s3_links.txt", "a+") as read_links:
                                 for rl in read_links.readlines():
-                                    print("{}:{}".format(rv, rl))
+                                    #print("{}:{}".format(rv, rl))
                                     if rv == rl:
                                         pass
                                     else:
